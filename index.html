@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>justmarcolin.dev</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav id = "navbar" class="navbar">
+            <div class="logo"><a href="/">j.dev</a></div>
+
+                <ul class="nav-links">
+                    <li><a href="#chi-sono">CHI SONO</a></li>
+                    <li><a href="#progetti">I MIEI LAVORI</a></li>
+                    <li><a href="#esperienze">LE MIE ESPERIENZE</a></li>
+                </ul>
+        </nav>
+        
+        <!--Definisco l'hero-->
+        <section class="hero-section">
+            <img src="images/hero.png" alt="Hero" class="hero-img">
+
+            <div class="hero-text">
+                <h1>Ciao, mi chiamo <strong>Marco.</strong></h1>
+                <h2>Sono <span class="typing viola"></span></h2>
+            </div>
+        </section>
+
+        <!--Definisco il chi sono-->
+        <section id="chi-sono">
+            <h1 class="viola">Chi sono.</h1>
+            <div class="chi-sono">
+                <p>Mi chiamo <strong>Marco</strong>, ho <strong>16 anni</strong> e frequento il terzo anno di un Istituto Tecnico Industriale ad indirizzo Informatica e Telecomunicazioni.</p> 
+                <p>Online uso spesso il nickname <strong>justMarcolin</strong>.</p>
+                <p>Mi appassionano la <strong>programmazione</strong>, la <strong>tecnologia</strong> e tutto ciò che riguarda il mondo dell’ <strong><u>informatica</u></strong>. </p>
+                <p>Nel tempo libero sperimento con nuovi linguaggi, lavoro su piccoli progetti personali e approfondisco ciò che studio a scuola.</p>
+                <p>Mi piace mettermi alla prova, imparare cose nuove e migliorare costantemente le mie competenze. </p>
+            </div>
+        </section>
+
+        <section id="progetti" class="projects">
+            <h1 class="viola">I miei lavori.</h1>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <img src="images/project1.png" alt="Lavoro 1" class="open-image">
+                    <h3>GreenDevelopBot</h3>
+                    <p>Un bot Discord multi-purpose scritto in Python usando la libreria <a href="https://discordpy.readthedocs.io/en/stable/">Discord.py</a>.</p>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>Discord.py</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/project2.png" alt="Lavoro 2" class="open-image">
+                    <h3>bash...tard</h3>
+                    <p>Un terminale... non molto amichevole! Risposte sarcastiche generate da un modello di AI locale.</p>
+                    <div class="tech">
+                        <span>Python</span>
+                        <span>LM Studio API</span>
+                        <span>Gemma 3</span>
+                    </div>
+                </div>
+
+
+        
+            
+                <!-- LIGHTBOX -->
+                <div class="lightbox" id="lightbox">
+                <img src="" alt="Preview" id="lightbox-img">
+                </div>
+        </section>
+        
+        <section id="esperienze" class="projects">
+            <h1 class="viola">Le mie esperienze.</h1>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <img src="images/experience1.png" alt="Esperienza 1" class="open-image">
+                    <h3>Android su Rabbit R1</h3>
+                    <p>Ho installato Android 13 su un Rabbit R1 usando <a href="https://github.com/RabbitHoleEscapeR1/r1_escape">r1_escape</a>.</p>
+                    <div class="tech">
+                        <span>Modding</span>
+                        <span>Jailbreak</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/experience2.png" alt="Esperienza 2" class="open-image">
+                    <h3>Homelabbing</h3>
+                    <p>
+                        Ho fatto esperienze di homelabbing usando <a href="https://www.proxmox.com/en/products/proxmox-virtual-environment/overview">Proxmox VE</a> e <a href="https://learn.microsoft.com/it-it/windows-server/virtualization/hyper-v/overview">Hyper-V.</a>
+                    </p>
+                    <div class="tech">
+                        <span>Proxmox VE</span>
+                        <span>Hyper-V</span>
+                        <span>Server</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/experience3.png" alt="Esperienza 3" class="open-image">
+                    <h3>Macchine Virtuali</h3>
+                    <p>
+                        Uso quotidianamente VM per testare nuovi software e sistemi operativi.
+                    </p>
+                    <div class="tech">
+                        <span>VM</span>
+                        <span>VMware Workstation Pro</span>
+                        <span>Testing</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!--Definisco il footer-->
+        <section id="footer">
+            <footer class="copyright">© 2025 <a href= "/">justmarcolin.dev</a> | All Rights Reserved</footer>
+        </section>
+
+        <!--Definisco gli script js-->
+        <script src="typing.js"></script>
+        <script src="navbar.js"></script>
+        <script src="lightbox.js"></script>
+    </body>
+
+</html>
