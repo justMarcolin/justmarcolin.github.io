@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToS | purpleGPT</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div class="logo">purple<span>GPT</span></div>
+                <div class="lang-selector">
+                    <select id="langSelect" onchange="changeLanguage()">
+                        <option value="it">🇮🇹 IT</option>
+                        <option value="en">🇺🇸 EN</option>
+                    </select>
+                </div>
+            </div>
+            <h1 id="mainTitle">Termini di Servizio e Privacy</h1>
+            <p id="lastUpdate">Ultimo aggiornamento: Febbraio 2026</p>
+        </header>
+
+        <main id="content">
+            </main>
+
+        <footer>
+            <p id="footerNote">&copy; 2026 purpleGPT - Non affiliato ufficialmente con Discord o Google.</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            it: {
+                title: "Termini di Servizio e Privacy",
+                update: "Ultimo aggiornamento: Febbraio 2026",
+                footer: "&copy; 2026 purpleGPT - Non affiliato ufficialmente con Discord o Google.",
+                sections: [
+                    { h2: "1. Introduzione", p: "Utilizzando <strong>purpleGPT</strong> su Discord, accetti i presenti termini. Il bot è un'interfaccia basata sul modello <strong>Gemini 3 Flash</strong> di Google." },
+                    { h2: "2. Dati Raccolti", p: "Per funzionare correttamente, purpleGPT memorizza esclusivamente:", list: ["<strong>Username e User ID Discord:</strong> Per identificarti nelle interazioni e per determinare l'accettazione ai presenti termini.", "<strong>Contenuto dei messaggi:</strong> La cronologia delle conversazioni viene salvata e divisa per <em>Canali Discord</em> per permettere al bot di mantenere il contesto della chat."] },
+                    { h2: "3. Utilizzo del Modello AI", p: ">purpleGPT utilizza le API di Google Gemini. Utilizzando il bot, l'utente accetta implicitamente anche i termini di servizio di Google.", link: "Leggi i Google Generative AI Terms of Service" },
+                    { h2: "4. Limitazioni di Responsabilità", p: "L'intelligenza artificiale può generare informazioni imprecise o allucinazioni. Nè purpleGPT nè il suo creatore sono responsabili per le decisioni prese sulla base delle risposte fornite dal bot." }
+                ]
+            },
+            en: {
+                title: "Terms of Service & Privacy",
+                update: "Last update: February 2026",
+                footer: "&copy; 2026 purpleGPT - Not officially affiliated with Discord or Google.",
+                sections: [
+                    { h2: "1. Introduction", p: "By using <strong>purpleGPT</strong> on Discord, you agree to these terms. The bot is an interface based on Google's <strong>Gemini 3 Flash</strong> model." },
+                    { h2: "2. Collected Data", p: "To function correctly, purpleGPT stores only:", list: ["<strong>Discord Username and User ID:</strong> To identify you in the interactions and to determine acceptance of these terms.", "<strong>History:</strong> The history of messages is stored and separated by <em>Discord Channels</em> to maintain chat context."] },
+                    { h2: "3. AI Model Usage", p: "purpleGPT uses Google Gemini APIs. By using the bot, you accept implicitly Google's terms of service.", link: "Read Google Generative AI Terms of Service" },
+                    { h2: "4. Limitations of Liability", p: "AI can generate errors. purpleGPT and its creator are not responsible for any decisions made based on the bot's responses." }
+                ]
+            }
+        };
+
+        function changeLanguage() {
+            const lang = document.getElementById('langSelect').value;
+            const data = translations[lang];
+            
+            document.getElementById('mainTitle').innerText = data.title;
+            document.getElementById('lastUpdate').innerText = data.update;
+            document.getElementById('footerNote').innerHTML = data.footer;
+
+            let contentHtml = '';
+            data.sections.forEach(sec => {
+                contentHtml += `<section><h2>${sec.h2}</h2><p>${sec.p}</p>`;
+                if(sec.list) {
+                    contentHtml += '<ul>' + sec.list.map(li => `<li>${li}</li>`).join('') + '</ul>';
+                }
+                if(sec.link) {
+                    contentHtml += `<div class="external-link"><a href="https://ai.google.dev/terms" target="_blank">🔗 ${sec.link}</a></div>`;
+                }
+                contentHtml += `</section>`;
+            });
+            document.getElementById('content').innerHTML = contentHtml;
+        }
+
+        // Inizializza la pagina
+        changeLanguage();
+    </script>
+</body>
+</html>
