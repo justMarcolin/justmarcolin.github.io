@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToS | purpleGPT</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+
     <div class="container">
         <header>
             <div class="header-top">
-                <div class="logo">purple<span>GPT</span></div>
+                <a class="logo" href="#">
+                    <img class="logo-img" src="logoNEW1-1.png" alt="purpleGPT logo">
+                    <span class="logo-wordmark"><span class="logo-purple">purple</span>GPT</span>
+                </a>
                 <div class="lang-selector">
                     <select id="langSelect" onchange="changeLanguage()">
                         <option value="it">🇮🇹 IT</option>
@@ -20,14 +28,13 @@
                 </div>
             </div>
             <h1 id="mainTitle">Termini di Servizio e Privacy</h1>
-            <p id="lastUpdate">Ultimo aggiornamento: Febbraio 2026</p>
+            <p id="lastUpdate">Ultimo aggiornamento: Marzo 2026</p>
         </header>
 
-        <main id="content">
-            </main>
+        <main id="content"></main>
 
         <footer>
-            <p id="footerNote">&copy; 2026 purpleGPT - Non affiliato ufficialmente con Discord o Google.</p>
+            <p id="footerNote">&copy; 2026 purpleGPT &mdash; Non affiliato ufficialmente con Discord o Google.</p>
         </footer>
     </div>
 
@@ -35,24 +42,110 @@
         const translations = {
             it: {
                 title: "Termini di Servizio e Privacy",
-                update: "Ultimo aggiornamento: Febbraio 2026",
-                footer: "&copy; 2026 purpleGPT - Non affiliato ufficialmente con Discord o Google.",
+                update: "Ultimo aggiornamento: Marzo 2026",
+                footer: "&copy; 2026 purpleGPT &mdash; Non affiliato ufficialmente con Discord o Google.",
                 sections: [
-                    { h2: "1. Introduzione", p: "Utilizzando <strong>purpleGPT</strong> su Discord, accetti i presenti termini. Il bot è un'interfaccia basata sul modello <strong>Gemini 3 Flash</strong> di Google." },
-                    { h2: "2. Dati Raccolti", p: "Per funzionare correttamente, purpleGPT memorizza esclusivamente:", list: ["<strong>Username e User ID Discord:</strong> Per identificarti nelle interazioni e per determinare l'accettazione ai presenti termini.", "<strong>Contenuto dei messaggi:</strong> La cronologia delle conversazioni viene salvata e divisa per <em>Canali Discord</em> per permettere al bot di mantenere il contesto della chat."] },
-                    { h2: "3. Utilizzo del Modello AI", p: "purpleGPT utilizza le API di Google Gemini. Utilizzando il bot, l'utente accetta implicitamente anche i termini di servizio di Google.", link: "Leggi i Google Generative AI Terms of Service" },
-                    { h2: "4. Limitazioni di Responsabilità", p: "L'intelligenza artificiale può generare informazioni imprecise o allucinazioni. Nè purpleGPT nè il suo creatore sono responsabili per le decisioni prese sulla base delle risposte fornite dal bot." }
+                    {
+                        h2: "1. Introduzione",
+                        p: "Utilizzando <strong>purpleGPT</strong> su Discord, accetti i presenti Termini di Servizio. purpleGPT è un bot Discord basato sul modello <strong>Gemini</strong> di Google (tramite Vertex AI), creato da <strong>justmarcolin</strong>. Il bot è progettato per integrarsi nativamente nelle community Discord, offrendo funzionalità di chat AI, generazione di immagini, editing fotografico e composizione musicale."
+                    },
+                    {
+                        h2: "2. Dati Raccolti",
+                        p: "Per funzionare correttamente, purpleGPT raccoglie e conserva esclusivamente i seguenti dati personali:",
+                        list: [
+                            "<strong>Username e User ID Discord:</strong> utilizzati per identificarti nelle interazioni e per registrare l'accettazione dei presenti termini.",
+                            "<strong>Cronologia dei messaggi:</strong> i messaggi inviati tramite <em>/chat</em> vengono salvati per canale Discord per permettere al bot di mantenere il contesto della conversazione. La cronologia è limitata agli ultimi 20 messaggi per canale.",
+                            "<strong>Impostazioni personali:</strong> temperatura di risposta, prompt personalizzato e formato immagine preferito, configurati tramite <em>/settings</em>.",
+                            "<strong>Riferimenti alle immagini generate:</strong> gli ID dei messaggi contenenti immagini generate da purpleGPT vengono salvati per permettere la funzione di editing tramite <em>/edit</em>.",
+                            "<strong>Nessun dato sensibile:</strong> purpleGPT non raccoglie né conserva password, dati di pagamento, indirizzi email o altri dati personali sensibili."
+                        ]
+                    },
+                    {
+                        h2: "3. I Tuoi Diritti (GDPR)",
+                        p: "In conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR) e le normative vigenti in materia di privacy, hai i seguenti diritti esercitabili direttamente tramite i comandi del bot:",
+                        list: [
+                            "<strong>Diritto di accesso ed esportazione (<em>/export_data</em>):</strong> puoi richiedere in qualsiasi momento l'esportazione di tutti i tuoi dati personali conservati dal bot. Riceverai un file JSON completo via messaggio privato Discord.",
+                            "<strong>Diritto all'oblio (<em>/delete_user_data</em>):</strong> puoi richiedere la cancellazione permanente di tutti i tuoi dati personali dal database del bot, inclusi messaggi, impostazioni e riferimenti alle immagini generate. La cancellazione è irreversibile.",
+                            "<strong>Diritto di rettifica (<em>/settings</em>):</strong> puoi modificare o aggiornare in qualsiasi momento le tue impostazioni personali.",
+                            "<strong>Diritto alla limitazione del trattamento (<em>/history</em>):</strong> gli amministratori del server possono disabilitare la memorizzazione della cronologia per specifici canali. Una volta disabilitata, nessun messaggio verrà salvato in quel canale.",
+                            "<strong>Diritto di opposizione:</strong> puoi interrompere l'utilizzo del bot in qualsiasi momento. I dati già raccolti possono essere eliminati tramite <em>/delete_user_data</em>."
+                        ]
+                    },
+                    {
+                        h2: "4. Utilizzo del Modello AI e Terze Parti",
+                        p: "purpleGPT utilizza le API di <strong>Google Gemini</strong> tramite <strong>Vertex AI</strong> per le funzionalità di chat, generazione immagini e composizione musicale. Utilizzando il bot, accetti implicitamente anche i termini di servizio di Google per i servizi AI generativi. I contenuti inviati tramite purpleGPT potrebbero essere elaborati sui server di Google.",
+                        link: "Leggi i Google Generative AI Terms of Service"
+                    },
+                    {
+                        h2: "5. Contenuti Generati e Watermark",
+                        p: "Le immagini generate tramite <em>/draw</em> e <em>/edit</em> includono un watermark digitale invisibile <strong>SynthID</strong> applicato automaticamente da Google. I contenuti generati dall'AI non sono di proprietà esclusiva dell'utente: Google non trasferisce diritti d'autore sui contenuti generati. È vietato utilizzare purpleGPT per generare contenuti illegali, offensivi, discriminatori o che violino i diritti di terzi."
+                    },
+                    {
+                        h2: "6. Conservazione e Sicurezza dei Dati",
+                        p: "I dati vengono conservati in un database <strong>SQLite</strong> locale sul server che ospita il bot. La cronologia dei messaggi è limitata automaticamente agli ultimi 20 messaggi per canale. Non condividiamo i tuoi dati con terze parti, ad eccezione di Google per l'elaborazione delle richieste AI. In caso di chiusura del servizio, tutti i dati degli utenti verranno eliminati permanentemente."
+                    },
+                    {
+                        h2: "7. Limitazioni di Responsabilità",
+                        p: "purpleGPT è un progetto indipendente non affiliato con Discord Inc. o Google LLC. L'intelligenza artificiale può generare informazioni imprecise, incomplete o errate (allucinazioni). Né purpleGPT né il suo creatore sono responsabili per eventuali decisioni prese sulla base delle risposte fornite dal bot, né per danni diretti o indiretti derivanti dall'utilizzo del servizio. Il servizio è fornito <em>as-is</em>, senza garanzie di continuità o disponibilità."
+                    },
+                    {
+                        h2: "8. Modifiche ai Termini",
+                        p: "Ci riserviamo il diritto di modificare i presenti termini in qualsiasi momento. Le modifiche sostanziali verranno comunicate tramite aggiornamento della data in questa pagina. L'utilizzo continuato del bot dopo la pubblicazione delle modifiche costituisce accettazione dei nuovi termini."
+                    }
                 ]
             },
             en: {
                 title: "Terms of Service & Privacy",
-                update: "Last update: February 2026",
-                footer: "&copy; 2026 purpleGPT - Not officially affiliated with Discord or Google.",
+                update: "Last update: March 2026",
+                footer: "&copy; 2026 purpleGPT &mdash; Not officially affiliated with Discord or Google.",
                 sections: [
-                    { h2: "1. Introduction", p: "By using <strong>purpleGPT</strong> on Discord, you agree to these terms. The bot is an interface based on Google's <strong>Gemini 3 Flash</strong> model." },
-                    { h2: "2. Collected Data", p: "To function correctly, purpleGPT stores only:", list: ["<strong>Discord Username and User ID:</strong> To identify you in the interactions and to determine acceptance of these terms.", "<strong>History:</strong> The history of messages is stored and separated by <em>Discord Channels</em> to maintain chat context."] },
-                    { h2: "3. AI Model Usage", p: "purpleGPT uses Google Gemini APIs. By using the bot, you accept implicitly Google's terms of service.", link: "Read Google Generative AI Terms of Service" },
-                    { h2: "4. Limitations of Liability", p: "AI can generate errors. purpleGPT and its creator are not responsible for any decisions made based on the bot's responses." }
+                    {
+                        h2: "1. Introduction",
+                        p: "By using <strong>purpleGPT</strong> on Discord, you agree to these Terms of Service. purpleGPT is a Discord bot based on Google's <strong>Gemini</strong> model (via Vertex AI), created by <strong>justmarcolin</strong>. The bot is designed to integrate natively into Discord communities, providing AI chat, image generation, photo editing, and music composition features."
+                    },
+                    {
+                        h2: "2. Data Collected",
+                        p: "To function correctly, purpleGPT collects and stores only the following personal data:",
+                        list: [
+                            "<strong>Discord Username and User ID:</strong> used to identify you in interactions and to record acceptance of these terms.",
+                            "<strong>Message history:</strong> messages sent via <em>/chat</em> are saved per Discord channel to allow the bot to maintain conversation context. History is limited to the last 20 messages per channel.",
+                            "<strong>Personal settings:</strong> response temperature, custom prompt, and preferred image format, configured via <em>/settings</em>.",
+                            "<strong>Generated image references:</strong> message IDs containing images generated by purpleGPT are saved to enable the editing feature via <em>/edit</em>.",
+                            "<strong>No sensitive data:</strong> purpleGPT does not collect or store passwords, payment data, email addresses, or other sensitive personal information."
+                        ]
+                    },
+                    {
+                        h2: "3. Your Rights (GDPR)",
+                        p: "In accordance with the General Data Protection Regulation (GDPR) and applicable privacy regulations, you have the following rights, exercisable directly through bot commands:",
+                        list: [
+                            "<strong>Right of access & export (<em>/export_data</em>):</strong> you can request an export of all your personal data stored by the bot at any time. You will receive a complete JSON file via Discord direct message.",
+                            "<strong>Right to erasure (<em>/delete_user_data</em>):</strong> you can request permanent deletion of all your personal data from the bot's database, including messages, settings, and image references. Deletion is irreversible.",
+                            "<strong>Right to rectification (<em>/settings</em>):</strong> you can modify or update your personal settings at any time.",
+                            "<strong>Right to restriction (<em>/history</em>):</strong> server administrators can disable history storage for specific channels. Once disabled, no messages will be saved in that channel.",
+                            "<strong>Right to object:</strong> you can stop using the bot at any time. Data already collected can be deleted via <em>/delete_user_data</em>."
+                        ]
+                    },
+                    {
+                        h2: "4. AI Model Usage & Third Parties",
+                        p: "purpleGPT uses <strong>Google Gemini</strong> APIs via <strong>Vertex AI</strong> for chat, image generation, and music composition features. By using the bot, you implicitly accept Google's terms of service for generative AI services. Content sent through purpleGPT may be processed on Google's servers.",
+                        link: "Read Google Generative AI Terms of Service"
+                    },
+                    {
+                        h2: "5. Generated Content & Watermark",
+                        p: "Images generated via <em>/draw</em> and <em>/edit</em> include an invisible <strong>SynthID</strong> digital watermark automatically applied by Google. AI-generated content is not exclusively owned by the user: Google does not transfer copyright over generated content. It is forbidden to use purpleGPT to generate illegal, offensive, discriminatory, or third-party rights-infringing content."
+                    },
+                    {
+                        h2: "6. Data Retention & Security",
+                        p: "Data is stored in a local <strong>SQLite</strong> database on the server hosting the bot. Message history is automatically limited to the last 20 messages per channel. We do not share your data with third parties, except Google for AI request processing. In the event of service shutdown, all user data will be permanently deleted."
+                    },
+                    {
+                        h2: "7. Limitations of Liability",
+                        p: "purpleGPT is an independent project not affiliated with Discord Inc. or Google LLC. AI may generate inaccurate, incomplete, or incorrect information (hallucinations). Neither purpleGPT nor its creator is responsible for any decisions made based on the bot's responses, nor for any direct or indirect damages arising from use of the service. The service is provided <em>as-is</em>, without guarantees of continuity or availability."
+                    },
+                    {
+                        h2: "8. Changes to Terms",
+                        p: "We reserve the right to modify these terms at any time. Substantial changes will be communicated by updating the date on this page. Continued use of the bot after changes are published constitutes acceptance of the new terms."
+                    }
                 ]
             }
         };
@@ -60,26 +153,42 @@
         function changeLanguage() {
             const lang = document.getElementById('langSelect').value;
             const data = translations[lang];
-            
+
             document.getElementById('mainTitle').innerText = data.title;
             document.getElementById('lastUpdate').innerText = data.update;
             document.getElementById('footerNote').innerHTML = data.footer;
 
-            let contentHtml = '';
-            data.sections.forEach(sec => {
-                contentHtml += `<section><h2>${sec.h2}</h2><p>${sec.p}</p>`;
-                if(sec.list) {
-                    contentHtml += '<ul>' + sec.list.map(li => `<li>${li}</li>`).join('') + '</ul>';
-                }
-                if(sec.link) {
-                    contentHtml += `<div class="external-link"><a href="https://ai.google.dev/terms" target="_blank">🔗 ${sec.link}</a></div>`;
-                }
-                contentHtml += `</section>`;
-            });
-            document.getElementById('content').innerHTML = contentHtml;
+            const content = document.getElementById('content');
+            content.style.opacity = '0';
+            content.style.transform = 'translateY(10px)';
+            content.style.transition = 'opacity 0.2s, transform 0.2s';
+
+            setTimeout(() => {
+                let html = '';
+                data.sections.forEach((sec, idx) => {
+                    html += `<section style="animation-delay:${0.55 + idx * 0.1}s"><h2>${sec.h2}</h2><p>${sec.p}</p>`;
+                    if (sec.list) {
+                        html += '<ul>' + sec.list.map(li => `<li>${li}</li>`).join('') + '</ul>';
+                    }
+                    if (sec.link) {
+                        html += `<div class="external-link"><a href="https://ai.google.dev/terms" target="_blank">&#128279; ${sec.link}</a></div>`;
+                    }
+                    html += '</section>';
+                });
+                content.innerHTML = html;
+
+                content.querySelectorAll('section').forEach((el) => {
+                    el.style.animationName = 'none';
+                    requestAnimationFrame(() => requestAnimationFrame(() => {
+                        el.style.animationName = '';
+                    }));
+                });
+
+                content.style.opacity = '1';
+                content.style.transform = 'translateY(0)';
+            }, 200);
         }
 
-        // Inizializza la pagina
         changeLanguage();
     </script>
 </body>
