@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>purpleGPT — AI Discord Bot | Chat, Images, Music & More</title>
+  <meta name="description"    content="purpleGPT is a free AI-powered Discord bot by jLabs. Generate images, compose music, build entire servers with AI — all without leaving Discord. Powered by Google Gemini.">
+  <meta name="keywords"       content="Discord bot, AI bot, Discord AI, image generation bot, music AI bot, purpleGPT, jLabs, Gemini bot, Discord automation">
+  <meta name="author"         content="justmarcolin — jLabs">
+  <meta name="robots"         content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color"    content="#7c3aed">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://justmarcolin.github.io/purplegpt">
+
+  <!-- hreflang — 6 supported languages -->
+  <link rel="alternate" hreflang="en" href="https://justmarcolin.github.io/purplegpt">
+  <link rel="alternate" hreflang="it" href="https://justmarcolin.github.io/purplegpt">
+  <link rel="alternate" hreflang="es" href="https://justmarcolin.github.io/purplegpt">
+  <link rel="alternate" hreflang="pt" href="https://justmarcolin.github.io/purplegpt">
+  <link rel="alternate" hreflang="fr" href="https://justmarcolin.github.io/purplegpt">
+  <link rel="alternate" hreflang="de" href="https://justmarcolin.github.io/purplegpt">
+  <link rel="alternate" hreflang="x-default" href="https://justmarcolin.github.io/purplegpt">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://justmarcolin.github.io/purplegpt">
+  <meta property="og:site_name"   content="purpleGPT">
+  <meta property="og:title"       content="purpleGPT — AI Discord Bot | Chat, Images, Music & More">
+  <meta property="og:description" content="Free AI-powered Discord bot by jLabs. Chat with AI, generate images, compose music, build entire servers — all without leaving Discord.">
+  <meta property="og:image"       content="https://justmarcolin.github.io/purplegpt/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"   content="purpleGPT — AI Discord Bot">
+  <meta property="og:locale"      content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:site"        content="@jlabs_team">
+  <meta name="twitter:creator"     content="@jlabs_team">
+  <meta name="twitter:title"       content="purpleGPT — AI Discord Bot">
+  <meta name="twitter:description" content="Free AI Discord bot. Chat, generate images, compose music, build servers — powered by Google Gemini.">
+  <meta name="twitter:image"       content="https://justmarcolin.github.io/purplegpt/og-image.png">
+
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 style-src  'self' https://fonts.googleapis.com;
+                 font-src   https://fonts.gstatic.com;
+                 img-src    'self' data:;
+                 script-src 'self';">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "purpleGPT",
+    "applicationCategory": "UtilitiesApplication",
+    "applicationSubCategory": "Discord Bot",
+    "operatingSystem": "Discord",
+    "description": "AI-powered Discord bot by jLabs. Chat with AI, generate images, compose music, and build entire server structures — all without leaving Discord.",
+    "url": "https://justmarcolin.github.io/purplegpt",
+    "downloadUrl": "https://discord.com/oauth2/authorize?client_id=1475902576330281022",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "jLabs",
+      "url": "https://justmarcolin.github.io/purplegpt"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    },
+    "inLanguage": ["en","it","es","pt","fr","de"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="nav">
+    <a href="#" class="nav-logo" aria-label="purpleGPT home">
+      <div class="orb"></div>
+      <span>purple<em>GPT</em></span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#features"  data-i18n="nav.features">Features</a>
+      <a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a>
+      <a href="#pricing"   data-i18n="nav.pricing">Pricing</a>
+      <a href="https://justmarcolin.github.io/purplegpt-tos" target="_blank" rel="noopener noreferrer" data-i18n="nav.tos">ToS</a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1475902576330281022"
+         class="nav-cta" target="_blank" rel="noopener noreferrer" data-i18n="nav.add">Add to Discord</a>
+    </div>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#features"   class="mobile-link" data-i18n="nav.features">Features</a>
+    <a href="#philosophy" class="mobile-link" data-i18n="nav.philosophy">Philosophy</a>
+    <a href="#pricing"    class="mobile-link" data-i18n="nav.pricing">Pricing</a>
+    <a href="https://justmarcolin.github.io/purplegpt-tos" class="mobile-link" target="_blank" rel="noopener noreferrer" data-i18n="nav.tos">ToS</a>
+    <a href="https://discord.com/oauth2/authorize?client_id=1475902576330281022"
+       class="mobile-cta" target="_blank" rel="noopener noreferrer" data-i18n="nav.add.mobile">Add to Discord →</a>
+  </div>
+
+
+
+    <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="grid-lines"></div>
+      <div class="orb-1"></div>
+      <div class="orb-2"></div>
+      <div class="orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" data-reveal>
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.badge">🧪 Public Beta — jLabs by justmarcolin</span>
+      </div>
+
+      <h1 class="hero-title" data-reveal data-delay="100" data-i18n-html="hero.title">
+        The AI that<br><em>lives inside</em><br>your Discord.
+      </h1>
+
+      <p class="hero-sub" data-reveal data-delay="200" data-i18n="hero.sub">
+        Chat · Generate images · Compose music · Build entire servers — all without ever leaving Discord.
+        Powered by Gemini. Built by students. Made for communities.
+      </p>
+
+      <div class="hero-actions" data-reveal data-delay="300">
+        <a href="https://discord.com/oauth2/authorize?client_id=1475902576330281022"
+           class="btn-primary" target="_blank" rel="noopener noreferrer">
+          <!-- Discord wordmark icon (inline SVG — standard practice for icon buttons) -->
+          <svg width="20" height="20" viewBox="0 0 127.14 96.36" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+          </svg>
+          <span data-i18n="hero.cta">Add purpleGPT — Free</span>
+        </a>
+        <a href="https://top.gg/bot/1475902576330281022/vote" class="btn-secondary"
+           target="_blank" rel="noopener noreferrer" data-i18n="hero.vote">Vote on top.gg 🗳️</a>
+      </div>
+
+    </div>
+    <div class="hero-screenshot" data-reveal data-delay="500">
+      <div class="screenshot-frame">
+        <div class="screenshot-bar" aria-hidden="true">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="screenshot-title">purpleGPT — #general</span>
+        </div>
+        <div class="screenshot-body">
+          <img src="hero-screenshot.png"
+               alt="purpleGPT AI bot conversation in a Discord channel"
+               onerror="this.style.visibility='hidden'">
+        </div>
+      </div>
+      <div class="screenshot-glow" aria-hidden="true"></div>
+    </div>
+  </section>
+
+
+
+    <div class="ticker-wrap" aria-hidden="true">
+    <div class="ticker">
+      <span>/chat</span><span>·</span>
+      <span>/draw</span><span>·</span>
+      <span>/edit</span><span>·</span>
+      <span>/compose</span><span>·</span>
+      <span>/genserver</span><span>·</span>
+      <span>/settings</span><span>·</span>
+      <span>/stats</span><span>·</span>
+      <span>/vote</span><span>·</span>
+      <span>/chat</span><span>·</span>
+      <span>/draw</span><span>·</span>
+      <span>/edit</span><span>·</span>
+      <span>/compose</span><span>·</span>
+      <span>/genserver</span><span>·</span>
+      <span>/settings</span><span>·</span>
+      <span>/stats</span><span>·</span>
+      <span>/vote</span><span>·</span>
+    </div>
+  </div>
+
+
+
+    <section class="features" id="features">
+    <div class="section-header" data-reveal>
+      <p class="eyebrow" data-i18n="feat.eyebrow">What purpleGPT can do</p>
+      <h2 data-i18n-html="feat.title">Everything you need.<br><em>Nothing you don't.</em></h2>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- /draw — large card (2 cols × 2 rows) -->
+      <div class="feat-card feat-large" data-reveal>
+        <div class="feat-icon" aria-hidden="true">🎨</div>
+        <h3>/draw</h3>
+        <p data-i18n="feat.draw.desc">Generate stunning images from a text prompt. Attach a reference image to guide the style. Supports 5 aspect ratios.</p>
+        <div class="feat-tag" data-i18n="feat.draw.tag">Gemini Image Generation</div>
+      </div>
+
+      <!-- /chat — compact card -->
+      <div class="feat-card" data-reveal data-delay="100">
+        <div class="feat-icon" aria-hidden="true">💬</div>
+        <h3>/chat</h3>
+        <p data-i18n="feat.chat.desc">Have a real conversation with an AI that remembers your channel's history and understands your server's context — roles, topics, pinned messages.</p>
+        <div class="feat-tag" data-i18n="feat.chat.tag">Gemini Flash · Pro (coming)</div>
+      </div>
+
+      <!-- /edit -->
+      <div class="feat-card" data-reveal data-delay="150">
+        <div class="feat-icon" aria-hidden="true">✏️</div>
+        <h3>/edit</h3>
+        <p data-i18n="feat.edit.desc">Describe how to modify an existing image. purpleGPT uses your last generated image automatically — no attachment needed.</p>
+        <div class="feat-tag" data-i18n="feat.edit.tag">Image-to-Image</div>
+      </div>
+
+      <!-- /compose — wide card spanning 2 columns -->
+      <div class="feat-card" data-reveal data-delay="200">
+        <div class="feat-icon" aria-hidden="true">🎵</div>
+        <h3>/compose</h3>
+        <p data-i18n="feat.compose.desc">Generate original AI music tracks — choose style, BPM, and duration. Optionally create a video with AI-generated cover art. Powered by Google Lyria.</p>
+        <div class="feat-tag" data-i18n="feat.compose.tag">Lyria Realtime · Audio + Video</div>
+      </div>
+
+      <!-- /genserver — accent card -->
+      <div class="feat-card feat-accent" data-reveal data-delay="250">
+        <div class="feat-icon" aria-hidden="true">🏗️</div>
+        <h3>/genserver</h3>
+        <p data-i18n="feat.genserver.desc">Describe the server you want — purpleGPT designs the entire channel structure, creates categories and topics with AI, and builds it live with your confirmation.</p>
+        <div class="feat-tag" data-i18n="feat.genserver.tag">AI Server Architect</div>
+      </div>
+
+      <!-- /settings -->
+      <div class="feat-card" data-reveal data-delay="300">
+        <div class="feat-icon" aria-hidden="true">⚙️</div>
+        <h3>/settings</h3>
+        <p data-i18n="feat.settings.desc">Every user gets their own AI temperature, image format, interface language, and custom prompt. 6 languages supported.</p>
+        <div class="feat-tag" data-i18n="feat.settings.tag">Per-user · 6 languages</div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+    <section class="philosophy" id="philosophy">
+    <div class="philosophy-inner">
+
+      <div class="philo-left" data-reveal>
+        <p class="eyebrow" data-i18n="philo.eyebrow">Our philosophy</p>
+        <blockquote data-i18n-html="philo.quote">
+          "Your community.<br>Your AI.<br>Your rules."
+        </blockquote>
+        <p class="philo-credit" data-i18n="philo.credit">— jLabs manifesto</p>
+      </div>
+
+      <div class="philo-right" data-reveal data-delay="150">
+        <p class="philo-text" data-i18n="philo.p1">
+          purpleGPT was born in a classroom — a group of students who wanted to see how far they could push a side project. No VC funding. No corporate roadmap. Just a team of curious people building something they actually want to use.
+        </p>
+        <p class="philo-text" data-i18n-html="philo.p2">
+          We believe AI should be <em>embedded</em> in your community — not a separate tab, not a chatbot you visit. It should know your server, speak your language, and stay out of the way when it's not needed.
+        </p>
+        <p class="philo-text" data-i18n="philo.p3">
+          Every feature ships because we thought it was cool. Every bug gets fixed because someone in the community reported it. That's it.
+        </p>
+
+        <div class="philo-values">
+          <div class="value" data-reveal data-delay="200">
+            <span class="value-icon" aria-hidden="true">🧪</span>
+            <div>
+              <strong data-i18n="philo.v1.title">Built in the open</strong>
+              <p data-i18n="philo.v1.desc">Public beta, real feedback, no marketing BS.</p>
+            </div>
+          </div>
+          <div class="value" data-reveal data-delay="250">
+            <span class="value-icon" aria-hidden="true">🔒</span>
+            <div>
+              <strong data-i18n="philo.v2.title">Privacy first</strong>
+              <p data-i18n="philo.v2.desc">Export or delete your data anytime. Zero tracking.</p>
+            </div>
+          </div>
+          <div class="value" data-reveal data-delay="300">
+            <span class="value-icon" aria-hidden="true">🌍</span>
+            <div>
+              <strong data-i18n="philo.v3.title">Multilingual by design</strong>
+              <p data-i18n="philo.v3.desc">6 languages. The AI responds in whatever you speak.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="socials" id="socials">
+    <div class="section-header" data-reveal>
+      <p class="eyebrow" data-i18n="socials.eyebrow">Stay in the loop</p>
+      <h2 data-i18n-html="socials.title">We build in public.<br><em>Follow the ride.</em></h2>
+      <p class="section-sub" data-i18n="socials.sub">No hype, no spam. Just updates and behind-the-scenes.</p>
+    </div>
+
+    <div class="socials-grid" data-reveal data-delay="100">
+
+      <a href="https://www.tiktok.com/@jlabs" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.87a8.18 8.18 0 0 0 4.78 1.52V6.93a4.85 4.85 0 0 1-1.01-.24z"/></svg>
+        </div>
+        <div class="social-info">
+          <span class="social-name">TikTok</span>
+          <span class="social-handle">@jlabs</span>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+      <a href="https://www.instagram.com/jlabs.team" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <div class="social-info">
+          <span class="social-name">Instagram</span>
+          <span class="social-handle">@jlabs.team</span>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+      <a href="https://www.x.com/jlabs_team" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </div>
+        <div class="social-info">
+          <span class="social-name">X (Twitter)</span>
+          <span class="social-handle">@jlabs_team</span>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+      <a href="https://www.youtube.com/@jlabs-team" target="_blank" rel="noopener noreferrer" class="social-card">
+        <div class="social-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </div>
+        <div class="social-info">
+          <span class="social-name">YouTube</span>
+          <span class="social-handle">@jlabs-team</span>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+      <a href="https://dsc.gg/purplegpt" target="_blank" rel="noopener noreferrer" class="social-card social-card-discord">
+        <div class="social-icon">
+          <svg width="22" height="22" viewBox="0 0 127.14 96.36" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/></svg>
+        </div>
+        <div class="social-info">
+          <span class="social-name">Discord</span>
+          <span class="social-handle">dsc.gg/purplegpt</span>
+        </div>
+        <span class="social-arrow">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="section-header" data-reveal>
+      <p class="eyebrow" data-i18n="pricing.eyebrow">Plans</p>
+      <h2 data-i18n="pricing.title">Grow at your own pace.</h2>
+      <p class="section-sub" data-i18n="pricing.sub">All plans include the full feature set. Premium unlocks more power.</p>
+      <div class="pricing-badge" data-i18n="pricing.soon-badge">✨ Premium coming soon — join beta for free in the meantime</div>
+    </div>
+
+    <div class="pricing-grid">
+
+      <div class="plan-card" data-reveal>
+        <div class="plan-name" data-i18n="pricing.free.name">Free</div>
+        <div class="plan-price">€0<span data-i18n="pricing.monthly">/month</span></div>
+        <ul class="plan-features">
+          <li data-i18n="pricing.f1">✓ Unlimited /chat (Flash model)</li>
+          <li data-i18n="pricing.f2">✓ 10 image generations/month</li>
+          <li data-i18n="pricing.f3">✓ 5 music compositions/month</li>
+          <li data-i18n="pricing.f4">✓ All 6 languages</li>
+          <li data-i18n="pricing.f5">✓ 1 /genserver per month</li>
+          <li data-i18n="pricing.f6">✓ Custom prompt &amp; settings</li>
+        </ul>
+        <a href="https://discord.com/oauth2/authorize?client_id=1475902576330281022"
+           class="plan-btn" target="_blank" rel="noopener noreferrer" data-i18n="pricing.free.btn">Add for free</a>
+      </div>
+
+      <div class="plan-card plan-popular" data-reveal data-delay="100">
+        <div class="plan-popular-badge" data-i18n="pricing.popular">Suggested</div>
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">€1.99<span data-i18n="pricing.monthly">/month</span></div>
+        <ul class="plan-features">
+          <li data-i18n="pricing.s1">✓ Everything in Free</li>
+          <li data-i18n="pricing.s2">✓ 30 image generations/month</li>
+          <li data-i18n="pricing.s3">✓ 15 music compositions/month</li>
+          <li data-i18n="pricing.s4">✓ 2 /genserver per month</li>
+        </ul>
+        <a href="#" class="plan-btn plan-btn-purple" data-i18n="pricing.starter.btn">Coming soon</a>
+      </div>
+
+      <div class="plan-card" data-reveal data-delay="200">
+        <div class="plan-name">Pro</div>
+        <div class="plan-price">€3.49<span data-i18n="pricing.monthly">/month</span></div>
+        <ul class="plan-features">
+          <li data-i18n="pricing.p1">✓ Everything in Starter</li>
+          <li data-i18n="pricing.p2">✓ Gemini Pro model for /chat</li>
+          <li data-i18n="pricing.p3">✓ 80 image generations/month</li>
+          <li data-i18n="pricing.p4">✓ 40 music compositions/month</li>
+          <li data-i18n="pricing.p5">✓ Unlimited /genserver</li>
+        </ul>
+        <a href="#" class="plan-btn" data-i18n="pricing.pro.btn">Coming soon</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+    <section class="cta-final">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="cta-orb"></div>
+    </div>
+    <div class="cta-content" data-reveal>
+      <h2 data-i18n-html="cta.title">Ready to give your server<br><em>a brain?</em></h2>
+      <p data-i18n="cta.sub">Free to add. No credit card. Takes 10 seconds.</p>
+      <a href="https://discord.com/oauth2/authorize?client_id=1475902576330281022"
+         class="btn-primary btn-xl" target="_blank" rel="noopener noreferrer">
+        <svg width="22" height="22" viewBox="0 0 127.14 96.36" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+        </svg>
+        <span data-i18n="cta.btn">Add purpleGPT to your server</span>
+      </a>
+    </div>
+  </section>
+
+
+
+    <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo" aria-label="purpleGPT home">
+          <div class="orb small"></div>
+          <span>purple<em>GPT</em></span>
+        </a>
+        <p data-i18n-html="footer.desc">AI-powered Discord bot.<br>Built by jLabs.</p>
+      </div>
+      <div class="footer-col">
+        <strong data-i18n="footer.product">Product</strong>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#pricing"  data-i18n="nav.pricing">Pricing</a>
+        <a href="https://top.gg/bot/1475902576330281022/vote" target="_blank" rel="noopener noreferrer" data-i18n="footer.vote">Vote on top.gg</a>
+        <a href="https://discord.com/oauth2/authorize?client_id=1475902576330281022"
+           target="_blank" rel="noopener noreferrer" data-i18n="footer.add">Add to Discord</a>
+      </div>
+      <div class="footer-col">
+        <strong data-i18n="footer.legal">Legal</strong>
+        <a href="https://justmarcolin.github.io/purplegpt-tos" target="_blank" rel="noopener noreferrer" data-i18n="footer.tos">Terms of Service &amp; Privacy</a>
+      </div>
+      <div class="footer-col">
+        <strong data-i18n="footer.community">Community</strong>
+        <a href="https://dsc.gg/purplegpt" target="_blank" rel="noopener noreferrer" data-i18n="footer.discord">Support &amp; Community Server</a>
+        <a href="https://www.instagram.com/jlabs.team" target="_blank" rel="noopener noreferrer" data-i18n="footer.instagram">Instagram</a>
+        <a href="https://www.tiktok.com/@jlabs" target="_blank" rel="noopener noreferrer" data-i18n="footer.tiktok">TikTok</a>
+        <a href="https://www.x.com/jlabs_team" target="_blank" rel="noopener noreferrer" data-i18n="footer.x">X</a>
+        <a href="https://www.youtube.com/@jlabs-team" target="_blank" rel="noopener noreferrer" data-i18n="footer.yt">YouTube</a>
+        <strong style="margin-top:0.5rem" data-i18n="footer.lang">Language</strong>
+        <div class="lang-switcher" role="group" aria-label="Select language">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="it">IT</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">© 2026 jLabs by justmarcolin. All rights reserved.</span>
+      <span class="footer-mono" data-i18n="footer.beta">purpleGPT 🟣 — Public Beta</span>
+    </div>
+  </footer>
+
+
+  <!-- Scripts loaded at the bottom so they never block rendering.
+       i18n.js must load before script.js (translations run on DOMContentLoaded). -->
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
