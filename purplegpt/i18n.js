@@ -518,7 +518,7 @@ const T = {
     'gallery.eyebrow': 'In Aktion',
     'gallery.title':   'Echte Ergebnisse.<br><em>Echte Community.</em>',
     'philo.eyebrow':  'Unsere Philosophie',
-    'philo.quote':    '"Deine Community.<br>Deine KI.<br>Deine Regeln."',
+    'philo.quote':    '"Your Community.<br>Your AI.<br>Your Rules."',
     'philo.credit':   '— jLabs',
     'philo.p1':       'purpleGPT entstand in einem Klassenzimmer — eine Gruppe Studenten, die sehen wollten, wie weit sie ein Nebenprojekt treiben können. Kein VC-Geld. Keine Unternehmens-Roadmap. Nur neugierige Menschen, die etwas bauen, das sie selbst nutzen wollen.',
     'philo.p2':       'Wir glauben, KI sollte in deine Community <em>integriert</em> sein — kein separater Tab, kein Chatbot, den du besuchst. Sie soll deinen Server kennen, deine Sprache sprechen und im Hintergrund bleiben, wenn sie nicht gebraucht wird.',
