@@ -701,6 +701,7 @@ section { padding: 7rem 2.5rem; }
 .plan-name  { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
 .plan-price { font-size: 2rem; font-weight: 800; letter-spacing: -0.04em; }
 .plan-price span { font-size: 0.82rem; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.plan-trial { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--accent2); opacity: 0.8; margin-top: 0.25rem; letter-spacing: 0.03em; }
 
 .plan-features         { display: flex; flex-direction: column; gap: 0.55rem; flex: 1; }
 .plan-features li      { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted2); line-height: 1.4; }
