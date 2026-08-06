@@ -1,5 +1,14 @@
-// Lista delle parole che verranno scritte e cancellate
-const words = ["uno studente.", "curioso.", "appassionato di informatica."];
+// Lista delle parole che verranno scritte e cancellate (supporta aggiornamento lingua)
+let words = ["uno studente.", "curioso.", "appassionato di informatica."];
+
+window.updateTypingWords = function(newWords) {
+    if (Array.isArray(newWords) && newWords.length > 0) {
+        words = newWords;
+        wordIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+    }
+};
 
 // Selezioniamo l'elemento HTML dove inserire il testo digitato
 const typingElement = document.querySelector(".typing");

@@ -9,14 +9,23 @@
     </head>
 
     <body>
-        <nav id = "navbar" class="navbar">
+        <nav id="navbar" class="navbar">
             <div class="logo"><a href="/">j.dev</a></div>
 
+            <div class="nav-right">
                 <ul class="nav-links">
-                    <li><a href="#chi-sono">CHI SONO</a></li>
-                    <li><a href="#progetti">I MIEI LAVORI</a></li>
-                    <li><a href="#esperienze">LE MIE ESPERIENZE</a></li>
+                    <li><a href="#chi-sono" data-i18n="nav.about">CHI SONO</a></li>
+                    <li><a href="#progetti" data-i18n="nav.projects">I MIEI LAVORI</a></li>
+                    <li><a href="#esperienze" data-i18n="nav.experiences">LE MIE ESPERIENZE</a></li>
                 </ul>
+
+                <div class="lang-selector">
+                    <select id="langSelect" onchange="changeLanguage()" aria-label="Seleziona lingua">
+                        <option value="it">🇮🇹 IT</option>
+                        <option value="en">🇬🇧 EN</option>
+                    </select>
+                </div>
+            </div>
         </nav>
         
         <!--Definisco l'hero-->
@@ -24,33 +33,33 @@
             <img src="images/hero.png" alt="Hero" class="hero-img">
 
             <div class="hero-text">
-                <h1>Ciao, mi chiamo <strong>Marco.</strong></h1>
-                <h2>Sono <span class="typing viola"></span></h2>
+                <h1 data-i18n="hero.title">Ciao, mi chiamo <strong>Marco.</strong></h1>
+                <h2><span data-i18n="hero.subtitle_prefix">Sono </span><span class="typing viola"></span></h2>
             </div>
         </section>
 
         <!--Definisco il chi sono-->
         <section id="chi-sono">
-            <h1 class="viola">Chi sono.</h1>
+            <h1 class="viola" data-i18n="about.heading">Chi sono.</h1>
             <div class="chi-sono">
-                <p>Mi chiamo <strong>Marco</strong>, ho <strong>16 anni</strong> e frequento il terzo anno di un Istituto Tecnico Industriale ad indirizzo Informatica e Telecomunicazioni.</p> 
-                <p>Online uso spesso il nickname <strong>justMarcolin</strong>.</p>
-                <p>Mi appassionano la <strong>programmazione</strong>, la <strong>tecnologia</strong> e tutto ciò che riguarda il mondo dell’ <strong><u>informatica</u></strong>. </p>
-                <p>Nel tempo libero sperimento con nuovi linguaggi, lavoro su piccoli progetti personali e approfondisco ciò che studio a scuola.</p>
-                <p>Mi piace mettermi alla prova, imparare cose nuove e migliorare costantemente le mie competenze. </p>
-                <p>Di recente ho creato <strong>jLabs</strong>, un mio piccolo "brand personale" che ha dato vita a <strong><u>purpleGPT</u></strong>, la mia ultima produzione. </p>
+                <p data-i18n="about.p1">Mi chiamo <strong>Marco</strong>, ho <strong>16 anni</strong> e frequento il terzo anno di un Istituto Tecnico Industriale ad indirizzo Informatica e Telecomunicazioni.</p> 
+                <p data-i18n="about.p2">Online uso spesso il nickname <strong>justMarcolin</strong>.</p>
+                <p data-i18n="about.p3">Mi appassionano la <strong>programmazione</strong>, la <strong>tecnologia</strong> e tutto ciò che riguarda il mondo dell’ <strong><u>informatica</u></strong>. </p>
+                <p data-i18n="about.p4">Nel tempo libero sperimento con nuovi linguaggi, lavoro su piccoli progetti personali e approfondisco ciò che studio a scuola.</p>
+                <p data-i18n="about.p5">Mi piace mettermi alla prova, imparare cose nuove e migliorare costantemente le mie competenze. </p>
+                <p data-i18n="about.p6">Di recente ho creato <strong>jLabs</strong>, un mio piccolo "brand personale" che ha dato vita a <strong><u>purpleGPT</u></strong>, la mia ultima produzione. </p>
             </div>
         </section>
 
         <section id="progetti" class="projects">
-            <h1 class="viola">I miei lavori.</h1>
+            <h1 class="viola" data-i18n="projects.heading">I miei lavori.</h1>
 
             <div class="projects-grid">
 
                 <div class="project-card">
                     <img src="images/project1.png" alt="Lavoro 1" class="open-image">
-                    <h3>purpleGPT</h3>
-                    <p>Una IA che si integra al tuo server Discord, un progetto <a href="https://www.youtube.com/@jlabs-team/">jLabs</a>.</p>
+                    <h3><a href="https://github.com/justMarcolin/purpleGPT" target="_blank" rel="noopener noreferrer" class="card-title-link">purpleGPT <svg class="github-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a></h3>
+                    <p data-i18n="projects.purplegpt.desc">Una IA che si integra al tuo server Discord, un progetto <a href="https://www.youtube.com/@jlabs-team/">jLabs</a>.</p>
                     <div class="tech">
                         <span>✨AI</span>
                         <span>Gemini APIs</span>
@@ -61,7 +70,7 @@
                 <div class="project-card">
                     <img src="images/project2.png" alt="Lavoro 2" class="open-image">
                     <h3>GreenDevelopBot</h3>
-                    <p>Un bot Discord multi-purpose scritto in Python usando la libreria <a href="https://discordpy.readthedocs.io/en/stable/">Discord.py</a>.</p>
+                    <p data-i18n="projects.greendevelopbot.desc">Un bot Discord multi-purpose scritto in Python usando la libreria <a href="https://discordpy.readthedocs.io/en/stable/">Discord.py</a>.</p>
                     <div class="tech">
                         <span>Python</span>
                         <span>Discord.py</span>
@@ -70,8 +79,8 @@
 
                 <div class="project-card">
                     <img src="images/project3.png" alt="Lavoro 3" class="open-image">
-                    <h3>bash...tard</h3>
-                    <p>Un terminale... non molto amichevole! Risposte sarcastiche generate da un modello di AI locale.</p>
+                    <h3><a href="https://github.com/justMarcolin/bash...tard" target="_blank" rel="noopener noreferrer" class="card-title-link">bash...tard <svg class="github-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg></a></h3>
+                    <p data-i18n="projects.bashtard.desc">Un terminale... non molto amichevole! Risposte sarcastiche generate da un modello di AI locale.</p>
                     <div class="tech">
                         <span>✨AI</span>
                         <span>Python</span>
@@ -79,9 +88,6 @@
                     </div>
                 </div>
 
-
-        
-            
                 <!-- LIGHTBOX -->
                 <div class="lightbox" id="lightbox">
                 <img src="" alt="Preview" id="lightbox-img">
@@ -89,14 +95,14 @@
         </section>
         
         <section id="esperienze" class="projects">
-            <h1 class="viola">Le mie esperienze.</h1>
+            <h1 class="viola" data-i18n="experiences.heading">Le mie esperienze.</h1>
 
             <div class="projects-grid">
 
                 <div class="project-card">
                     <img src="images/experience1.png" alt="Esperienza 1" class="open-image">
-                    <h3>Android su Rabbit R1</h3>
-                    <p>Ho installato Android 13 su un Rabbit R1 usando <a href="https://github.com/RabbitHoleEscapeR1/r1_escape">r1_escape</a>.</p>
+                    <h3 data-i18n="experiences.rabbit.title">Android su Rabbit R1</h3>
+                    <p data-i18n="experiences.rabbit.desc">Ho installato Android 13 su un Rabbit R1 usando <a href="https://github.com/RabbitHoleEscapeR1/r1_escape">r1_escape</a>.</p>
                     <div class="tech">
                         <span>Modding</span>
                         <span>Jailbreak</span>
@@ -105,8 +111,8 @@
 
                 <div class="project-card">
                     <img src="images/experience2.png" alt="Esperienza 2" class="open-image">
-                    <h3>Homelabbing</h3>
-                    <p>
+                    <h3 data-i18n="experiences.homelab.title">Homelabbing</h3>
+                    <p data-i18n="experiences.homelab.desc">
                         Ho fatto esperienze di homelabbing usando <a href="https://www.proxmox.com/en/products/proxmox-virtual-environment/overview">Proxmox VE</a> e <a href="https://learn.microsoft.com/it-it/windows-server/virtualization/hyper-v/overview">Hyper-V.</a>
                     </p>
                     <div class="tech">
@@ -118,8 +124,8 @@
 
                 <div class="project-card">
                     <img src="images/experience3.png" alt="Esperienza 3" class="open-image">
-                    <h3>Macchine Virtuali</h3>
-                    <p>
+                    <h3 data-i18n="experiences.vm.title">Macchine Virtuali</h3>
+                    <p data-i18n="experiences.vm.desc">
                         Uso quotidianamente VM per testare nuovi software e sistemi operativi.
                     </p>
                     <div class="tech">
@@ -134,10 +140,11 @@
         
         <!--Definisco il footer-->
         <section id="footer">
-            <footer class="copyright">© 2026 <a href= "/">justmarcolin.dev</a> | All Rights Reserved</footer>
+            <footer class="copyright" data-i18n="footer.text">© 2026 <a href= "/">justmarcolin.dev</a> | Tutti i diritti riservati</footer>
         </section>
 
         <!--Definisco gli script js-->
+        <script src="lang.js"></script>
         <script src="typing.js"></script>
         <script src="navbar.js"></script>
         <script src="lightbox.js"></script>
