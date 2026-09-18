@@ -17,11 +17,11 @@
   --border2: #242436;
 
   /* Brand purple */
-  --purple:  #7c3aed;
-  --purple2: #5b21b6;
-  --accent:  #a78bfa;   /* lighter purple for text highlights */
-  --accent2: #c4b5fd;   /* even lighter, for hover states */
-  --glow:    #7c3aed55; /* semi-transparent for box-shadows / orbs */
+  --purple:  #9b59e8;
+  --purple2: #7a3bc7;
+  --accent:  #9b59e8;   /* purple for text highlights */
+  --accent2: #b87ef0;   /* lighter purple for hover states */
+  --glow:    rgba(155, 89, 232, 0.35); /* semi-transparent for box-shadows / orbs */
 
   /* Typography */
   --text:    #e8e4f0;   /* primary text */
@@ -125,21 +125,21 @@ nav.scrolled {
 }
 .nav-logo .orb {
   width: 28px; height: 28px;
-  background: radial-gradient(circle at 35% 35%, #c4b5fd, #5b21b6);
+  background: radial-gradient(circle at 35% 35%, #b87ef0, #7a3bc7);
   border-radius: 50%;
   box-shadow: 0 0 14px var(--glow);
   flex-shrink: 0;
   transition: box-shadow 0.3s;
 }
 .nav-logo .orb.small { width: 22px; height: 22px; }
-.nav-logo:hover .orb { box-shadow: 0 0 22px #7c3aed88; }
+.nav-logo:hover .orb { box-shadow: 0 0 22px rgba(155, 89, 232, 0.55); }
 .nav-logo span {
   font-size: 1rem;
   font-weight: 800;
-  color: var(--text);
+  color: #ffffff;
   letter-spacing: -0.03em;
 }
-.nav-logo span em { color: var(--accent); font-style: normal; }
+.nav-logo span em { color: var(--purple); font-style: normal; }
 
 .nav-links {
   display: flex;
@@ -155,7 +155,7 @@ nav.scrolled {
   border-radius: 6px;
   transition: color 0.15s, background 0.15s;
 }
-.nav-links a:hover { color: var(--accent2); background: rgba(124, 58, 237, 0.1); }
+.nav-links a:hover { color: var(--accent2); background: rgba(155, 89, 232, 0.1); }
 .nav-cta {
   color: #fff !important;
   background: var(--purple) !important;
@@ -261,13 +261,13 @@ nav.scrolled {
 }
 .orb-2 {
   width: 450px; height: 450px;
-  background: radial-gradient(circle, #7c3aed18 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(155, 89, 232, 0.1) 0%, transparent 65%);
   bottom: 50px; right: -100px;
   animation: floatY 11s ease-in-out infinite reverse;
 }
 .orb-3 {
   width: 300px; height: 300px;
-  background: radial-gradient(circle, #5b21b612 0%, transparent 65%);
+  background: radial-gradient(circle, rgba(122, 59, 199, 0.07) 0%, transparent 65%);
   bottom: 200px; left: -60px;
   animation: floatY 13s ease-in-out infinite;
   animation-delay: -4s;
@@ -294,8 +294,8 @@ nav.scrolled {
   font-family: 'DM Mono', monospace;
   font-size: 0.68rem;
   color: var(--accent);
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.22);
+  background: rgba(155, 89, 232, 0.1);
+  border: 1px solid rgba(155, 89, 232, 0.22);
   padding: 0.3rem 0.85rem;
   border-radius: 100px;
   margin-bottom: 2.5rem;
@@ -524,10 +524,10 @@ section { padding: 7rem 2.5rem; }
 .feat-large { grid-column: span 2; grid-row: span 2; }
 
 .feat-accent {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(91, 33, 182, 0.08));
-  border-color: rgba(124, 58, 237, 0.25);
+  background: linear-gradient(135deg, rgba(155, 89, 232, 0.12), rgba(122, 59, 199, 0.08));
+  border-color: rgba(155, 89, 232, 0.25);
 }
-.feat-accent:hover { border-color: rgba(124, 58, 237, 0.5); }
+.feat-accent:hover { border-color: rgba(155, 89, 232, 0.5); }
 
 .feat-icon { font-size: 1.8rem; }
 .feat-card h3 {
@@ -680,10 +680,10 @@ section { padding: 7rem 2.5rem; }
 }
 .plan-card:hover { border-color: var(--border2); transform: translateY(-2px); }
 .plan-popular {
-  border-color: rgba(124, 58, 237, 0.4);
-  background: linear-gradient(160deg, rgba(124, 58, 237, 0.1), var(--surface));
+  border-color: rgba(155, 89, 232, 0.4);
+  background: linear-gradient(160deg, rgba(155, 89, 232, 0.1), var(--surface));
 }
-.plan-popular:hover { border-color: rgba(124, 58, 237, 0.7); }
+.plan-popular:hover { border-color: rgba(155, 89, 232, 0.7); }
 
 .plan-popular-badge {
   position: absolute;
@@ -807,7 +807,7 @@ footer {
   transition: all 0.15s;
 }
 .lang-btn:hover  { border-color: var(--purple); color: var(--accent); }
-.lang-btn.active { border-color: var(--purple); color: var(--accent); background: rgba(124, 58, 237, 0.1); }
+.lang-btn.active { border-color: var(--purple); color: var(--accent); background: rgba(155, 89, 232, 0.1); }
 
 .footer-bottom {
   max-width: 1100px;
@@ -853,10 +853,10 @@ footer {
 }
 /* Discord card gets a subtle purple tint */
 .social-card-discord {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), var(--surface));
-  border-color: rgba(124, 58, 237, 0.2);
+  background: linear-gradient(135deg, rgba(155, 89, 232, 0.08), var(--surface));
+  border-color: rgba(155, 89, 232, 0.2);
 }
-.social-card-discord:hover { border-color: rgba(124, 58, 237, 0.45); }
+.social-card-discord:hover { border-color: rgba(155, 89, 232, 0.45); }
 
 .social-icon {
   width: 40px; height: 40px;
