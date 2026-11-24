@@ -931,3 +931,260 @@ footer {
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; align-items: center; }
 }
+
+
+/* ─── HUMAN EDITORIAL UPDATE NOTE (2026 PAUSE) ───────────────────────────────*/
+.nav-update-link {
+  color: var(--accent2) !important;
+  background: rgba(155, 89, 232, 0.1);
+  border: 1px solid rgba(155, 89, 232, 0.24);
+}
+.nav-update-link:hover {
+  background: rgba(155, 89, 232, 0.2) !important;
+  color: #ffffff !important;
+}
+.mobile-link-update {
+  color: var(--accent2) !important;
+}
+
+.team-note {
+  position: relative;
+  padding: 7.5rem 2rem 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.team-note-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.note-orb-left {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(155, 89, 232, 0.14) 0%, transparent 65%);
+  top: -120px;
+  left: 10%;
+  filter: blur(50px);
+}
+
+.note-orb-right {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(251, 191, 36, 0.06) 0%, transparent 65%);
+  bottom: -100px;
+  right: 8%;
+  filter: blur(50px);
+}
+
+.note-sheet {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  background: linear-gradient(165deg, rgba(20, 17, 29, 0.92) 0%, rgba(13, 13, 18, 0.96) 100%);
+  border: 1px solid rgba(155, 89, 232, 0.24);
+  border-radius: 22px;
+  padding: 2.75rem 3rem 2.35rem;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.5),
+    0 0 48px rgba(155, 89, 232, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.note-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.note-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  color: #e4d4fa;
+  background: rgba(155, 89, 232, 0.12);
+  border: 1px solid rgba(155, 89, 232, 0.28);
+  padding: 0.34rem 0.85rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.note-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgba(251, 191, 36, 0.75);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+.note-lang {
+  margin-top: 0;
+}
+
+.note-title {
+  font-size: clamp(1.75rem, 3.6vw, 2.45rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1.65rem;
+}
+
+.note-title em {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent2);
+}
+
+.note-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  margin-bottom: 1.75rem;
+}
+
+.note-body p {
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: #d6d0e3;
+  font-weight: 400;
+}
+
+.note-body .note-thanks {
+  color: #f3effa;
+  font-weight: 600;
+}
+
+.note-sign {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.55rem;
+  color: #e2d4fa;
+  margin-bottom: 1.85rem;
+  letter-spacing: 0.01em;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--border);
+}
+
+.note-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.note-btn-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--purple), var(--purple2));
+  padding: 0.58rem 1.05rem;
+  border-radius: 9px;
+  box-shadow: 0 6px 20px rgba(155, 89, 232, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.note-btn-ig:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(155, 89, 232, 0.42);
+}
+
+.note-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.74rem;
+  color: var(--muted2);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border2);
+  padding: 0.56rem 0.95rem;
+  border-radius: 9px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.note-btn-ghost:hover {
+  border-color: var(--purple);
+  color: var(--text);
+  background: rgba(155, 89, 232, 0.08);
+}
+
+.note-explore {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.74rem;
+  color: var(--muted2);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.note-explore:hover {
+  color: var(--accent2);
+  transform: translateY(1px);
+}
+
+/* Smooth spacing between the team letter and the existing hero below */
+.hero.hero-after-note {
+  min-height: auto;
+  padding-top: 3.5rem;
+}
+
+.hero-badge-pause {
+  background: rgba(251, 191, 36, 0.08);
+  border-color: rgba(251, 191, 36, 0.24);
+  color: #f6d57f;
+}
+
+.badge-dot-pause {
+  background: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .team-note {
+    padding: 6.2rem 1.25rem 2.25rem;
+  }
+  .note-sheet {
+    padding: 1.9rem 1.45rem 1.65rem;
+    border-radius: 18px;
+  }
+  .note-body p {
+    font-size: 0.96rem;
+    line-height: 1.72;
+  }
+  .note-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .note-links {
+    width: 100%;
+  }
+  .note-btn-ig, .note-btn-ghost {
+    flex: 1;
+    justify-content: center;
+  }
+}

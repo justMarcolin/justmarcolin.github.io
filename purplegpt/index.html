@@ -99,6 +99,7 @@
     </a>
 
     <div class="nav-links">
+      <a href="#update-note" class="nav-update-link" data-i18n="nav.update">Update</a>
       <a href="#features"  data-i18n="nav.features">Features</a>
       <a href="#philosophy" data-i18n="nav.philosophy">Philosophy</a>
       <a href="#pricing"   data-i18n="nav.pricing">Pricing</a>
@@ -112,6 +113,7 @@
   </nav>
 
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#update-note" class="mobile-link mobile-link-update" data-i18n="nav.update">Update</a>
     <a href="#features"   class="mobile-link" data-i18n="nav.features">Features</a>
     <a href="#philosophy" class="mobile-link" data-i18n="nav.philosophy">Philosophy</a>
     <a href="#pricing"    class="mobile-link" data-i18n="nav.pricing">Pricing</a>
@@ -120,9 +122,75 @@
        class="mobile-cta" target="_blank" rel="noopener noreferrer" data-i18n="nav.add.mobile">Add to Discord →</a>
   </div>
 
+  <section class="team-note" id="update-note" aria-labelledby="note-heading">
+    <div class="team-note-bg" aria-hidden="true">
+      <div class="note-orb-left"></div>
+      <div class="note-orb-right"></div>
+    </div>
+
+    <article class="note-sheet" data-reveal>
+      <div class="note-topbar">
+        <div class="note-pill">
+          <span class="note-dot" aria-hidden="true"></span>
+          <span data-i18n="note.eyebrow">A note from the team · November 2026</span>
+        </div>
+
+        <div class="lang-switcher note-lang" role="group" aria-label="Select language">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="it">IT</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="pt">PT</button>
+          <button class="lang-btn" data-lang="fr">FR</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
+      </div>
+
+      <h1 class="note-title" id="note-heading" data-i18n-html="note.title">
+        An honest update about <em>purpleGPT.</em> 🟣
+      </h1>
+
+      <div class="note-body">
+        <p data-i18n="note.p1">
+          Last week we announced maintenance until November 20 — unfortunately, things are taking longer than expected. Due to some internal challenges within the team, we've decided to pause purpleGPT for the rest of 2026.
+        </p>
+        <p data-i18n="note.p2">
+          It wasn't an easy call, especially after all the energy we've poured into building this with you. Right now, taking a step back is the right move to sort things out properly rather than rushing something half-baked.
+        </p>
+        <p data-i18n="note.p3">
+          All your settings and server data remain safe, and whenever there is news worth sharing, we'll communicate it right here and on our official channels.
+        </p>
+        <p class="note-thanks" data-i18n="note.p4">
+          Thank you for every message, test, and piece of support you've given us so far. We truly mean it.
+        </p>
+      </div>
+
+      <p class="note-sign" data-i18n="note.sign">— jLabs Team</p>
+
+      <div class="note-footer">
+        <div class="note-links">
+          <a href="https://www.instagram.com/jlabs.team" class="note-btn-ig" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+            </svg>
+            <span data-i18n="note.cta.ig">Follow @jlabs.team</span>
+          </a>
+          <a href="https://dsc.gg/purplegpt" class="note-btn-ghost" target="_blank" rel="noopener noreferrer" data-i18n="note.cta.discord">
+            Discord Community
+          </a>
+        </div>
+
+        <a href="#hero" class="note-explore" data-i18n="note.explore">
+          Explore purpleGPT below ↓
+        </a>
+      </div>
+    </article>
+  </section>
 
 
-    <section class="hero" id="hero">
+
+    <section class="hero hero-after-note" id="hero">
     <div class="hero-bg" aria-hidden="true">
       <div class="grid-lines"></div>
       <div class="orb-1"></div>
@@ -130,14 +198,14 @@
       <div class="orb-3"></div>
     </div>
     <div class="hero-content">
-      <div class="hero-badge" data-reveal>
-        <span class="badge-dot"></span>
-        <span data-i18n="hero.badge">🧪 Public Beta — jLabs by justmarcolin</span>
+      <div class="hero-badge hero-badge-pause" data-reveal>
+        <span class="badge-dot badge-dot-pause"></span>
+        <span data-i18n="hero.badge">🟣 On pause for 2026 — jLabs by justmarcolin</span>
       </div>
 
-      <h1 class="hero-title" data-reveal data-delay="100" data-i18n-html="hero.title">
+      <h2 class="hero-title" data-reveal data-delay="100" data-i18n-html="hero.title">
         The AI that<br><em>lives inside</em><br>your Discord.
-      </h1>
+      </h2>
 
       <p class="hero-sub" data-reveal data-delay="200" data-i18n="hero.sub">
         Chat · Generate images · Compose music · Build entire servers — all without ever leaving Discord.
@@ -498,7 +566,7 @@
 
     <div class="footer-bottom">
       <span data-i18n="footer.copy">© 2026 jLabs by justmarcolin. All rights reserved.</span>
-      <span class="footer-mono" data-i18n="footer.beta">purpleGPT 🟣 — Public Beta</span>
+      <span class="footer-mono" data-i18n="footer.beta">purpleGPT 🟣 — Paused for 2026</span>
     </div>
   </footer>
 

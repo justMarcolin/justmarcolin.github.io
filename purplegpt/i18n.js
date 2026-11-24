@@ -14,6 +14,7 @@ const DEFAULT_LANG    = 'en';
 const T = {
   en: {
     /* Navigation */
+    'nav.update':      'Update',
     'nav.features':    'Features',
     'nav.philosophy':  'Philosophy',
     'nav.pricing':     'Pricing',
@@ -21,8 +22,20 @@ const T = {
     'nav.add':         'Add to Discord',
     'nav.add.mobile':  'Add to Discord →',
 
+    /* Team Note */
+    'note.eyebrow':    'A note from the team · November 2026',
+    'note.title':      'An honest update about <em>purpleGPT.</em> 🟣',
+    'note.p1':         'Last week we announced maintenance until November 20 — unfortunately, things are taking longer than expected. Due to some internal challenges within the team, we\'ve decided to pause purpleGPT for the rest of 2026.',
+    'note.p2':         'It wasn\'t an easy call, especially after all the energy we\'ve poured into building this with you. Right now, taking a step back is the right move to sort things out properly rather than rushing something half-baked.',
+    'note.p3':         'All your settings and server data remain safe, and whenever there is news worth sharing, we\'ll communicate it right here and on our official channels.',
+    'note.p4':         'Thank you for every message, test, and piece of support you\'ve given us so far. We truly mean it.',
+    'note.sign':       '— jLabs Team',
+    'note.cta.ig':     'Follow @jlabs.team',
+    'note.cta.discord':'Discord Community',
+    'note.explore':    'Explore purpleGPT below ↓',
+
     /* Hero */
-    'hero.badge':      '🧪 Public Beta — jLabs by justmarcolin',
+    'hero.badge':      '🟣 On pause for 2026 — jLabs by justmarcolin',
     'hero.title':      'The AI that<br><em>lives inside</em><br>your Discord.',
     'hero.sub':        'Chat · Generate images · Compose music · Build entire servers — all without ever leaving Discord. Powered by Gemini. Built by students. Made for communities.',
     'hero.cta':        'Add purpleGPT to your server',
@@ -106,7 +119,7 @@ const T = {
     'footer.x':         'X (Twitter)',
     'footer.yt':        'YouTube',
     'footer.copy':      '© {year} jLabs by justmarcolin. All rights reserved.',
-    'footer.beta':      'purpleGPT 🟣 — Public Beta',
+    'footer.beta':      'purpleGPT 🟣 — Paused for 2026',
 
     /* Socials */
     'socials.eyebrow': 'Stay in the loop',
@@ -117,6 +130,7 @@ const T = {
   },
 
   it: {
+    'nav.update':      'Aggiornamento',
     'nav.features':    'Funzionalità',
     'nav.philosophy':  'Filosofia',
     'nav.pricing':     'Prezzi',
@@ -124,7 +138,18 @@ const T = {
     'nav.add':         'Aggiungi a Discord',
     'nav.add.mobile':  'Aggiungi a Discord →',
 
-    'hero.badge':      '🧪 Beta pubblica — jLabs by justmarcolin',
+    'note.eyebrow':    'Una nota dal team · Novembre 2026',
+    'note.title':      'Un aggiornamento sincero su <em>purpleGPT.</em> 🟣',
+    'note.p1':         'La settimana scorsa avevamo annunciato una manutenzione fino al 20 novembre — purtroppo, le cose stanno richiedendo più tempo del previsto. A causa di alcuni problemi interni al team, abbiamo deciso di mettere in pausa purpleGPT per tutto il resto del 2026.',
+    'note.p2':         'Non è stata una decisione facile, soprattutto dopo tutta l\'energia che abbiamo messo nel costruire questo progetto insieme a voi. In questo momento, fare un passo indietro è la scelta giusta per sistemare tutto come si deve invece di affrettare qualcosa fatto a metà.',
+    'note.p3':         'Tutte le vostre impostazioni e i dati dei server restano al sicuro e, ogni volta che ci saranno novità degne di nota, ve le comunicheremo proprio qui e sui nostri canali ufficiali.',
+    'note.p4':         'Grazie per ogni messaggio, test e gesto di supporto che ci avete dato finora. Lo intendiamo davvero.',
+    'note.sign':       '— Il team jLabs',
+    'note.cta.ig':     'Segui @jlabs.team',
+    'note.cta.discord':'Community Discord',
+    'note.explore':    'Scopri purpleGPT qui sotto ↓',
+
+    'hero.badge':      '🟣 In pausa per il 2026 — jLabs by justmarcolin',
     'hero.title':      'L\'AI che<br><em>vive dentro</em><br>il tuo Discord.',
     'hero.sub':        'Chat · Genera immagini · Componi musica · Crea server interi — tutto senza mai uscire da Discord. Powered by Gemini. Fatto da studenti. Per le community.',
     'hero.cta':        'Aggiungi purpleGPT al tuo server',
@@ -203,7 +228,7 @@ const T = {
     'footer.x':         'X (Twitter)',
     'footer.yt':        'YouTube',
     'footer.copy':      '© {year} jLabs by justmarcolin. Tutti i diritti riservati.',
-    'footer.beta':      'purpleGPT 🟣 — Beta pubblica',
+    'footer.beta':      'purpleGPT 🟣 — In pausa per il 2026',
 
     /* Socials */
     'socials.eyebrow': 'Rimani aggiornato',
@@ -214,13 +239,24 @@ const T = {
   },
 
   es: {
+    'nav.update':      'Aviso',
     'nav.features':    'Funciones',
     'nav.philosophy':  'Filosofía',
     'nav.pricing':     'Precios',
     'nav.tos':         'ToS',
     'nav.add':         'Añadir a Discord',
     'nav.add.mobile':  'Añadir a Discord →',
-    'hero.badge':      '🧪 Beta pública — jLabs by justmarcolin',
+    'note.eyebrow':    'Una nota del equipo · Noviembre 2026',
+    'note.title':      'Una actualización sincera sobre <em>purpleGPT.</em> 🟣',
+    'note.p1':         'La semana pasada anunciamos mantenimiento hasta el 20 de noviembre — lamentablemente, las cosas están llevando más tiempo de lo esperado. Debido a algunos problemas internos en el equipo, hemos decidido pausar purpleGPT durante el resto de 2026.',
+    'note.p2':         'No ha sido una decisión fácil, especialmente después de toda la energía que hemos puesto en construir esto con vosotros. Ahora mismo, dar un paso atrás es lo correcto para ordenar las cosas bien en lugar de apresurar algo a medias.',
+    'note.p3':         'Todos vuestros ajustes y datos del servidor siguen a salvo, y cuando haya novedades que compartir, las comunicaremos aquí mismo y en nuestros canales oficiales.',
+    'note.p4':         'Gracias por cada mensaje, prueba y muestra de apoyo que nos habéis dado hasta ahora. Lo decimos de verdad.',
+    'note.sign':       '— Equipo jLabs',
+    'note.cta.ig':     'Seguir a @jlabs.team',
+    'note.cta.discord':'Comunidad de Discord',
+    'note.explore':    'Explorar purpleGPT abajo ↓',
+    'hero.badge':      '🟣 En pausa en 2026 — jLabs by justmarcolin',
     'hero.title':      'La IA que<br><em>vive dentro</em><br>de tu Discord.',
     'hero.sub':        'Chat · Genera imágenes · Compón música · Crea servidores enteros — todo sin salir de Discord. Powered by Gemini. Hecho por estudiantes. Para comunidades.',
     'hero.cta':        'Añadir purpleGPT a tu servidor',
@@ -294,7 +330,7 @@ const T = {
     'footer.x':         'X (Twitter)',
     'footer.yt':        'YouTube',
     'footer.copy':      '© {year} jLabs by justmarcolin. Todos los derechos reservados.',
-    'footer.beta':      'purpleGPT 🟣 — Beta pública',
+    'footer.beta':      'purpleGPT 🟣 — En pausa en 2026',
 
     /* Socials */
     'socials.eyebrow': 'Mantente al día',
@@ -305,13 +341,24 @@ const T = {
   },
 
   pt: {
+    'nav.update':      'Aviso',
     'nav.features':    'Funcionalidades',
     'nav.philosophy':  'Filosofia',
     'nav.pricing':     'Preços',
     'nav.tos':         'ToS',
     'nav.add':         'Adicionar ao Discord',
     'nav.add.mobile':  'Adicionar ao Discord →',
-    'hero.badge':      '🧪 Beta pública — jLabs by justmarcolin',
+    'note.eyebrow':    'Uma nota da equipe · Novembro 2026',
+    'note.title':      'Uma atualização sincera sobre o <em>purpleGPT.</em> 🟣',
+    'note.p1':         'Na semana passada anunciamos manutenção até 20 de novembro — infelizmente, as coisas estão demorando mais do que o esperado. Devido a alguns desafios internos na equipe, decidimos pausar o purpleGPT pelo restante de 2026.',
+    'note.p2':         'Não foi uma escolha fácil, especialmente depois de toda a energia que colocamos para construir isso com vocês. Agora, dar um passo atrás é a decisão certa para organizar tudo direito em vez de apressar algo pela metade.',
+    'note.p3':         'Todas as suas configurações e dados de servidor continuam seguros e, sempre que houver novidades para compartilhar, avisaremos aqui e em nossos canais oficiais.',
+    'note.p4':         'Obrigado por cada mensagem, teste e apoio que vocês nos deram até agora. Falamos sério.',
+    'note.sign':       '— Equipe jLabs',
+    'note.cta.ig':     'Seguir @jlabs.team',
+    'note.cta.discord':'Comunidade Discord',
+    'note.explore':    'Explorar o purpleGPT abaixo ↓',
+    'hero.badge':      '🟣 Pausado em 2026 — jLabs by justmarcolin',
     'hero.title':      'A IA que<br><em>vive dentro</em><br>do teu Discord.',
     'hero.sub':        'Chat · Gera imagens · Compõe música · Cria servidores inteiros — tudo sem sair do Discord. Powered by Gemini. Feito por estudantes. Para comunidades.',
     'hero.cta':        'Adicionar purpleGPT ao teu servidor',
@@ -385,7 +432,7 @@ const T = {
     'footer.x':         'X (Twitter)',
     'footer.yt':        'YouTube',
     'footer.copy':      '© {year} jLabs by justmarcolin. Todos os direitos reservados.',
-    'footer.beta':      'purpleGPT 🟣 — Beta pública',
+    'footer.beta':      'purpleGPT 🟣 — Pausado em 2026',
 
     /* Socials */
     'socials.eyebrow': 'Fica a par',
@@ -396,13 +443,24 @@ const T = {
   },
 
   fr: {
+    'nav.update':      'Annonce',
     'nav.features':    'Fonctionnalités',
     'nav.philosophy':  'Philosophie',
     'nav.pricing':     'Tarifs',
     'nav.tos':         'CGU',
     'nav.add':         'Ajouter à Discord',
     'nav.add.mobile':  'Ajouter à Discord →',
-    'hero.badge':      '🧪 Bêta publique — jLabs by justmarcolin',
+    'note.eyebrow':    'Un mot de l\'équipe · Novembre 2026',
+    'note.title':      'Une mise à jour sincère sur <em>purpleGPT.</em> 🟣',
+    'note.p1':         'La semaine dernière, nous avons annoncé une maintenance jusqu\'au 20 novembre — malheureusement, cela prend plus de temps que prévu. En raison de défis internes au sein de l\'équipe, nous avons décidé de mettre purpleGPT en pause pour le reste de 2026.',
+    'note.p2':         'Ce n\'était pas une décision facile, surtout après toute l\'énergie que nous avons mise à construire ce projet avec vous. Aujourd\'hui, prendre du recul est le bon choix pour remettre les choses en ordre proprement plutôt que de précipiter quelque chose d\'inachevé.',
+    'note.p3':         'Tous vos paramètres et données de serveur restent en sécurité, et dès qu\'il y aura des nouvelles à partager, nous les communiquerons ici même et sur nos réseaux officiels.',
+    'note.p4':         'Merci pour chaque message, chaque test et tout le soutien que vous nous avez apporté jusqu\'ici. Nous le pensons vraiment.',
+    'note.sign':       '— L\'équipe jLabs',
+    'note.cta.ig':     'Suivre @jlabs.team',
+    'note.cta.discord':'Communauté Discord',
+    'note.explore':    'Découvrir purpleGPT ci-dessous ↓',
+    'hero.badge':      '🟣 En pause pour 2026 — jLabs by justmarcolin',
     'hero.title':      'L\'IA qui<br><em>vit dans</em><br>ton Discord.',
     'hero.sub':        'Chat · Génère des images · Compose de la musique · Crée des serveurs entiers — sans jamais quitter Discord. Powered by Gemini. Fait par des étudiants. Pour les communautés.',
     'hero.cta':        'Ajouter purpleGPT à ton serveur',
@@ -476,7 +534,7 @@ const T = {
     'footer.x':         'X (Twitter)',
     'footer.yt':        'YouTube',
     'footer.copy':      '© {year} jLabs by justmarcolin. Tous droits réservés.',
-    'footer.beta':      'purpleGPT 🟣 — Bêta publique',
+    'footer.beta':      'purpleGPT 🟣 — En pause pour 2026',
 
     /* Socials */
     'socials.eyebrow': 'Reste dans la boucle',
@@ -487,13 +545,24 @@ const T = {
   },
 
   de: {
+    'nav.update':      'Update',
     'nav.features':    'Funktionen',
     'nav.philosophy':  'Philosophie',
     'nav.pricing':     'Preise',
     'nav.tos':         'AGB',
     'nav.add':         'Zu Discord hinzufügen',
     'nav.add.mobile':  'Zu Discord hinzufügen →',
-    'hero.badge':      '🧪 Public Beta — jLabs by justmarcolin',
+    'note.eyebrow':    'Eine Nachricht vom Team · November 2026',
+    'note.title':      'Ein ehrliches Update zu <em>purpleGPT.</em> 🟣',
+    'note.p1':         'Letzte Woche haben wir eine Wartung bis zum 20. November angekündigt — leider dauert alles länger als erwartet. Aufgrund interner Herausforderungen im Team haben wir beschlossen, purpleGPT für den Rest des Jahres 2026 zu pausieren.',
+    'note.p2':         'Das war keine leichte Entscheidung, besonders nach all der Energie, die wir gemeinsam mit euch in dieses Projekt gesteckt haben. Im Moment ist ein Schritt zurück der richtige Weg, um alles ordentlich zu klären, statt etwas Halbgares zu überstürzen.',
+    'note.p3':         'Alle eure Einstellungen und Serverdaten bleiben sicher, und sobald es echte Neuigkeiten gibt, teilen wir sie direkt hier und auf unseren offiziellen Kanälen mit.',
+    'note.p4':         'Danke für jede Nachricht, jeden Test und jede Unterstützung, die ihr uns bisher gegeben habt. Das meinen wir wirklich so.',
+    'note.sign':       '— jLabs Team',
+    'note.cta.ig':     '@jlabs.team folgen',
+    'note.cta.discord':'Discord-Community',
+    'note.explore':    'purpleGPT unten entdecken ↓',
+    'hero.badge':      '🟣 Pausiert für 2026 — jLabs by justmarcolin',
     'hero.title':      'Die KI, die<br><em>in deinem</em><br>Discord lebt.',
     'hero.sub':        'Chat · Bilder generieren · Musik komponieren · Ganze Server erstellen — alles ohne Discord zu verlassen. Powered by Gemini. Von Studenten gebaut. Für Communities.',
     'hero.cta':        'purpleGPT zu deinem Server hinzufügen',
@@ -567,7 +636,7 @@ const T = {
     'footer.x':         'X (Twitter)',
     'footer.yt':        'YouTube',
     'footer.copy':      '© {year} jLabs by justmarcolin. Alle Rechte vorbehalten.',
-    'footer.beta':      'purpleGPT 🟣 — Public Beta',
+    'footer.beta':      'purpleGPT 🟣 — Pausiert für 2026',
 
     /* Socials */
     'socials.eyebrow': 'Bleib auf dem Laufenden',
