@@ -294,6 +294,33 @@ footer {
     background-color: #111;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+
+footer .social-link,
+footer .social-link:visited {
+    display: inline-flex;
+    align-items: center;
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+footer .social-link:hover {
+    color: #7a33ff;
+    transform: translateY(-2px);
+}
+
+.copyright-text {
+    margin: 0;
+}
+
 footer a {
     color: inherit; 
     font-weight: inherit; 
